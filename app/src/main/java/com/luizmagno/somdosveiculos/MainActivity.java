@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarInMainId);
         setSupportActionBar(toolbar);
         CollapsingToolbarLayout toolBarLayout = findViewById(R.id.toolbar_layout);
-        toolBarLayout.setTitle(getTitle());
+        toolBarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
+        toolBarLayout.setCollapsedTitleTextColor(getResources().getColor(android.R.color.white));
     }
 
     @Override
