@@ -13,11 +13,70 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/aviaoId"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
+            android:contentDescription="@string/aviao"
+            android:src="@drawable/aviao_1"
+            app:layout_constraintEnd_toStartOf="@+id/carroId"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/carroId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/carro"
+            android:src="@drawable/carro_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/aviaoId"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/bicicletaId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/bicicleta"
+            android:src="@drawable/bicicleta_1"
+            app:layout_constraintEnd_toStartOf="@+id/caminhaoId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aviaoId" />
+
+        <ImageView
+            android:id="@+id/caminhaoId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/caminhao"
+            android:src="@drawable/caminhao_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bicicletaId"
+            app:layout_constraintTop_toBottomOf="@+id/carroId" />
+
+        <ImageView
+            android:id="@+id/helicopId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/helicop"
+            android:src="@drawable/helicop_1"
+            app:layout_constraintEnd_toStartOf="@+id/motoId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bicicletaId" />
+
+        <ImageView
+            android:id="@+id/motoId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/moto"
+            android:src="@drawable/moto_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/helicopId"
+            app:layout_constraintTop_toBottomOf="@id/caminhaoId" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

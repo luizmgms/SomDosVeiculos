@@ -4,4 +4,10 @@
     <string name="desc_image_collapse">Som dos Veículos</string>
     <string name="action_about">Sobre</string>
     <string name="action_share">Compartilhar</string>
+    <string name="aviao">Avião</string>
+    <string name="carro">Carro</string>
+    <string name="bicicleta">Bicicleta</string>
+    <string name="caminhao">Caminhão</string>
+    <string name="helicop">Helicóptero</string>
+    <string name="moto">Motocicleta</string>
 </resources>
