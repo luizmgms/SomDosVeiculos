@@ -10,4 +10,10 @@
     <string name="caminhao">Caminhão</string>
     <string name="helicop">Helicóptero</string>
     <string name="moto">Motocicleta</string>
+    <string name="ambulancia">Ambulância</string>
+    <string name="aviao_mono">Avião Monomotor</string>
+    <string name="bombeiro">Caminhão dos Bombeiros</string>
+    <string name="foguete">Foguete</string>
+    <string name="lixo">Caminhão do Lixo</string>
+    <string name="policia">Carro da Polícia</string>
 </resources>

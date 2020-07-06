@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:contentDescription="@string/aviao"
-            android:src="@drawable/aviao_1"
+            android:src="@drawable/anim_aviao"
             app:layout_constraintEnd_toStartOf="@+id/carroId"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:contentDescription="@string/carro"
-            android:src="@drawable/carro_1"
+            android:src="@drawable/anim_carro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/aviaoId"
             app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:contentDescription="@string/bicicleta"
-            android:src="@drawable/bicicleta_1"
+            android:src="@drawable/anim_bici"
             app:layout_constraintEnd_toStartOf="@+id/caminhaoId"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/aviaoId" />
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:contentDescription="@string/caminhao"
-            android:src="@drawable/caminhao_1"
+            android:src="@drawable/anim_caminhao"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/bicicletaId"
             app:layout_constraintTop_toBottomOf="@+id/carroId" />
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:contentDescription="@string/helicop"
-            android:src="@drawable/helicop_1"
+            android:src="@drawable/anim_helicop"
             app:layout_constraintEnd_toStartOf="@+id/motoId"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bicicletaId" />
@@ -73,10 +73,77 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:contentDescription="@string/moto"
-            android:src="@drawable/moto_1"
+            android:src="@drawable/anim_moto"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/helicopId"
             app:layout_constraintTop_toBottomOf="@id/caminhaoId" />
+
+        <ImageView
+            android:id="@+id/ambuId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/ambulancia"
+            android:src="@drawable/anim_ambu"
+            app:layout_constraintEnd_toStartOf="@+id/aviaoMonoId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/helicopId" />
+
+        <ImageView
+            android:id="@+id/aviaoMonoId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/aviao_mono"
+            android:src="@drawable/anim_aviao_mono"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ambuId"
+            app:layout_constraintTop_toBottomOf="@id/motoId" />
+
+        <ImageView
+            android:id="@+id/bombId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/bombeiro"
+            android:src="@drawable/anim_bombeiro"
+            app:layout_constraintEnd_toStartOf="@+id/foguetId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ambuId" />
+
+        <ImageView
+            android:id="@+id/foguetId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/foguete"
+            android:src="@drawable/anim_foguet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bombId"
+            app:layout_constraintTop_toBottomOf="@id/aviaoMonoId" />
+
+        <ImageView
+            android:id="@+id/lixoId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/lixo"
+            android:src="@drawable/anim_lixo"
+            app:layout_constraintEnd_toStartOf="@+id/policiaId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bombId" />
+
+        <ImageView
+            android:id="@+id/policiaId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/policia"
+            android:src="@drawable/anim_policia"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lixoId"
+            app:layout_constraintTop_toBottomOf="@id/foguetId" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
