@@ -144,6 +144,51 @@
             app:layout_constraintStart_toEndOf="@+id/lixoId"
             app:layout_constraintTop_toBottomOf="@id/foguetId" />
 
+        <ImageView
+            android:id="@+id/subId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/sub"
+            android:src="@drawable/anim_sub"
+            app:layout_constraintEnd_toStartOf="@+id/tratorId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lixoId" />
+
+        <ImageView
+            android:id="@+id/tratorId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/trator"
+            android:src="@drawable/anim_trator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/subId"
+            app:layout_constraintTop_toBottomOf="@id/policiaId" />
+
+        <ImageView
+            android:id="@+id/tremId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/trem"
+            android:src="@drawable/anim_trem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tratorId"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/design"
+            android:src="@drawable/credit_free_pik"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tremId"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -16,4 +16,14 @@
     <string name="foguete">Foguete</string>
     <string name="lixo">Caminhão do Lixo</string>
     <string name="policia">Carro da Polícia</string>
+    <string name="sub">Submarino</string>
+    <string name="trator">Trator</string>
+    <string name="trem">Trem</string>
+    <string name="design">Design from freepik.com</string>
+    <string name="text_share_link">Que legal e divertido o som dos veículos. Tem carro, avião, trem e muito mais. Vem se divertir também. Baixe o App em: link\n</string>
+    <string name="link_to_policy">https:/www.google.com</string>
+    <string name="avalie_app">Avaliar</string>
+    <string name="created_at">Criado por Luiz Magno M. de Sousa.\nArt Design por freepik.com\nVersão 1.0.0</string>
+    <string name="link_to_avalie">https:/www.google.com</string>
+    <string name="policy">Política de Privaciade</string>
 </resources>
