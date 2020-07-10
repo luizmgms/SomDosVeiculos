@@ -26,4 +26,10 @@
     <string name="created_at">Criado por Luiz Magno M. de Sousa.\nArt Design por freepik.com\nVersão 1.0.0</string>
     <string name="link_to_avalie">https:/www.google.com</string>
     <string name="policy">Política de Privaciade</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_1">Terrestres</string>
+    <string name="tab_text_2">Aéreos</string>
+    <string name="tab_text_3">Aquáticos</string>
+    <string name="navio">Navio</string>
 </resources>
