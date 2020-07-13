@@ -60,7 +60,26 @@ public class AquaticosFragment extends Fragment implements View.OnClickListener{
     public void onClick(View view) {
 
         showAnimation(view);
+        openRaw(view.getId());
 
+    }
+
+    private void showAnimation(View view) {
+        ImageView imageView = (ImageView) view;
+        AnimationDrawable animationDrawable = (AnimationDrawable) imageView.getDrawable();
+        animationDrawable.stop();
+        animationDrawable.start();
+    }
+
+    private void showSnackBar(String string) {
+        CoordinatorLayout coordinatorLayout = getActivity().findViewById(R.id.coordInMainId);
+        Snackbar snackbar = Snackbar
+                .make(coordinatorLayout, string,
+                        Snackbar.LENGTH_SHORT);
+        snackbar.show();
+    }
+
+    private void openRaw(int id){
         try {
             if (mp.isPlaying()) {
                 mp.stop();
@@ -70,7 +89,7 @@ public class AquaticosFragment extends Fragment implements View.OnClickListener{
 
             AssetFileDescriptor afd = null;
 
-            switch (view.getId()) {
+            switch (id) {
                 case R.id.subId:
                     afd = getResources().openRawResourceFd(R.raw.sub_1);
                     showSnackBar(getResources().getString(R.string.sub));
@@ -92,20 +111,5 @@ public class AquaticosFragment extends Fragment implements View.OnClickListener{
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    private void showAnimation(View view) {
-        ImageView imageView = (ImageView) view;
-        AnimationDrawable animationDrawable = (AnimationDrawable) imageView.getDrawable();
-        animationDrawable.stop();
-        animationDrawable.start();
-    }
-
-    private void showSnackBar(String string) {
-        CoordinatorLayout coordinatorLayout = getActivity().findViewById(R.id.coordInMainId);
-        Snackbar snackbar = Snackbar
-                .make(coordinatorLayout, string,
-                        Snackbar.LENGTH_SHORT);
-        snackbar.show();
     }
 }

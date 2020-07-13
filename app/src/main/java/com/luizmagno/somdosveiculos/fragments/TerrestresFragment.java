@@ -66,7 +66,26 @@ public class TerrestresFragment extends Fragment implements View.OnClickListener
     public void onClick(View view) {
 
         showAnimation(view);
+        openRaw(view.getId());
 
+    }
+
+    private void showAnimation(View view) {
+        ImageView imageView = (ImageView) view;
+        AnimationDrawable animationDrawable = (AnimationDrawable) imageView.getDrawable();
+        animationDrawable.stop();
+        animationDrawable.start();
+    }
+
+    private void showSnackBar(String string) {
+        CoordinatorLayout coordinatorLayout = getActivity().findViewById(R.id.coordInMainId);
+        Snackbar snackbar = Snackbar
+                .make(coordinatorLayout, string,
+                        Snackbar.LENGTH_SHORT);
+        snackbar.show();
+    }
+
+    private void openRaw(int id) {
         try {
             if (mp.isPlaying()) {
                 mp.stop();
@@ -76,7 +95,7 @@ public class TerrestresFragment extends Fragment implements View.OnClickListener
 
             AssetFileDescriptor afd = null;
 
-            switch (view.getId()) {
+            switch (id) {
                 case R.id.carroId:
                     afd = getResources().openRawResourceFd(R.raw.carro_1);
                     showSnackBar(getResources().getString(R.string.carro));
@@ -130,21 +149,5 @@ public class TerrestresFragment extends Fragment implements View.OnClickListener
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-    }
-
-    private void showAnimation(View view) {
-        ImageView imageView = (ImageView) view;
-        AnimationDrawable animationDrawable = (AnimationDrawable) imageView.getDrawable();
-        animationDrawable.stop();
-        animationDrawable.start();
-    }
-
-    private void showSnackBar(String string) {
-        CoordinatorLayout coordinatorLayout = getActivity().findViewById(R.id.coordInMainId);
-        Snackbar snackbar = Snackbar
-                .make(coordinatorLayout, string,
-                        Snackbar.LENGTH_SHORT);
-        snackbar.show();
     }
 }
