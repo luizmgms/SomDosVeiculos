@@ -1,6 +1,7 @@
 package com.luizmagno.somdosveiculos;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
@@ -19,6 +20,15 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private CoordinatorLayout coordinatorLayout;
+    public static MediaPlayer mp;
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mp.stop();
+        mp.release();
+        mp = null;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +53,15 @@ public class MainActivity extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
 
         setIconsOfTabs(tabs, sectionsPagerAdapter);
+
+        //Inicializando Player
+        mp = new MediaPlayer();
+        mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.start();
+            }
+        });
 
     }
 

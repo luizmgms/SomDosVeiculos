@@ -2,13 +2,11 @@ package com.luizmagno.somdosveiculos;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-
 import com.luizmagno.somdosveiculos.fragments.TerrestresFragment;
 import com.luizmagno.somdosveiculos.fragments.AereosFragment;
 import com.luizmagno.somdosveiculos.fragments.AquaticosFragment;
@@ -36,6 +34,7 @@ public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
         //return PlaceholderFragment.newInstance(position + 1);
         switch (position){
             case 0:
+
                 return new TerrestresFragment();
             case 1:
                 return new AereosFragment();

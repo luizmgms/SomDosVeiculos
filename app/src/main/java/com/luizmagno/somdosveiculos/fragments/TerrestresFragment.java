@@ -2,7 +2,6 @@ package com.luizmagno.somdosveiculos.fragments;
 
 import android.content.res.AssetFileDescriptor;
 import android.graphics.drawable.AnimationDrawable;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
@@ -11,58 +10,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.google.android.material.snackbar.Snackbar;
-import com.luizmagno.somdosveiculos.MainActivity;
 import com.luizmagno.somdosveiculos.R;
 import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TerrestresFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import static com.luizmagno.somdosveiculos.MainActivity.mp;
+
 public class TerrestresFragment extends Fragment implements View.OnClickListener {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
     private ArrayList<Integer> vehicles;
-    private MediaPlayer mp;
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public TerrestresFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment TerrestresFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static TerrestresFragment newInstance(String param1, String param2) {
-        TerrestresFragment fragment = new TerrestresFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -73,15 +36,6 @@ public class TerrestresFragment extends Fragment implements View.OnClickListener
 
         //Add Ids
         addIdsOfVehicles();
-
-        //Player
-        mp = new MediaPlayer();
-        mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.start();
-            }
-        });
 
         //Set Click
         setClickOfVehicles(fragment);
@@ -111,13 +65,7 @@ public class TerrestresFragment extends Fragment implements View.OnClickListener
     @Override
     public void onClick(View view) {
 
-        //Animation
-        ImageView imageView = (ImageView) view;
-        AnimationDrawable animationDrawable = (AnimationDrawable) imageView.getDrawable();
-        animationDrawable.stop();
-        animationDrawable.start();
-
-        Snackbar snackbar;
+        showAnimation(view);
 
         try {
             if (mp.isPlaying()) {
@@ -127,83 +75,50 @@ public class TerrestresFragment extends Fragment implements View.OnClickListener
             mp.reset();
 
             AssetFileDescriptor afd = null;
-            CoordinatorLayout coordinatorLayout = getActivity().findViewById(R.id.coordInMainId);
 
             switch (view.getId()) {
                 case R.id.carroId:
                     afd = getResources().openRawResourceFd(R.raw.carro_1);
-                    snackbar = Snackbar
-                            .make(coordinatorLayout, getResources().getString(R.string.carro),
-                                    Snackbar.LENGTH_SHORT);
-                    snackbar.show();
+                    showSnackBar(getResources().getString(R.string.carro));
                     break;
                 case R.id.bicicletaId:
                     afd = getResources().openRawResourceFd(R.raw.bicicleta_1);
-                    snackbar = Snackbar
-                            .make(coordinatorLayout, getResources().getString(R.string.bicicleta),
-                                    Snackbar.LENGTH_SHORT);
-                    snackbar.show();
+                    showSnackBar(getResources().getString(R.string.bicicleta));
                     break;
                 case R.id.caminhaoId:
                     afd = getResources().openRawResourceFd(R.raw.caminhao);
-                    snackbar = Snackbar
-                            .make(coordinatorLayout, getResources().getString(R.string.caminhao),
-                                    Snackbar.LENGTH_SHORT);
-                    snackbar.show();
+                    showSnackBar(getResources().getString(R.string.caminhao));
                     break;
                 case R.id.motoId:
                     afd = getResources().openRawResourceFd(R.raw.moto);
-                    snackbar = Snackbar
-                            .make(coordinatorLayout, getResources().getString(R.string.moto),
-                                    Snackbar.LENGTH_SHORT);
-                    snackbar.show();
+                    showSnackBar(getResources().getString(R.string.moto));
                     break;
                 case R.id.ambuId:
                     afd = getResources().openRawResourceFd(R.raw.ambu);
-                    snackbar = Snackbar
-                            .make(coordinatorLayout, getResources().getString(R.string.ambulancia),
-                                    Snackbar.LENGTH_SHORT);
-                    snackbar.show();
+                    showSnackBar(getResources().getString(R.string.ambulancia));
                     break;
                 case R.id.bombId:
                     afd = getResources().openRawResourceFd(R.raw.bombeiro);
-                    snackbar = Snackbar
-                            .make(coordinatorLayout, getResources().getString(R.string.bombeiro),
-                                    Snackbar.LENGTH_SHORT);
-                    snackbar.show();
+                    showSnackBar(getResources().getString(R.string.bombeiro));
                     break;
                 case R.id.lixoId:
                     afd = getResources().openRawResourceFd(R.raw.lixo_1);
-                    snackbar = Snackbar
-                            .make(coordinatorLayout, getResources().getString(R.string.lixo),
-                                    Snackbar.LENGTH_SHORT);
-                    snackbar.show();
+                    showSnackBar(getResources().getString(R.string.lixo));
                     break;
                 case R.id.policiaId:
                     afd = getResources().openRawResourceFd(R.raw.policia);
-                    snackbar = Snackbar
-                            .make(coordinatorLayout, getResources().getString(R.string.policia),
-                                    Snackbar.LENGTH_SHORT);
-                    snackbar.show();
+                    showSnackBar(getResources().getString(R.string.policia));
                     break;
                 case R.id.tratorId:
                     afd = getResources().openRawResourceFd(R.raw.trator_1);
-                    snackbar = Snackbar
-                            .make(coordinatorLayout, getResources().getString(R.string.trator),
-                                    Snackbar.LENGTH_SHORT);
-                    snackbar.show();
+                    showSnackBar(getResources().getString(R.string.trator));
                     break;
                 case R.id.tremId:
                     afd = getResources().openRawResourceFd(R.raw.trem_1);
-                    snackbar = Snackbar
-                            .make(coordinatorLayout, getResources().getString(R.string.trem),
-                                    Snackbar.LENGTH_SHORT);
-                    snackbar.show();
+                    showSnackBar(getResources().getString(R.string.trem));
                     break;
                 default:
-                    snackbar = Snackbar
-                            .make(coordinatorLayout, "Error!", Snackbar.LENGTH_SHORT);
-                    snackbar.show();
+                    showSnackBar("Error");
                     break;
             }
 
@@ -216,5 +131,20 @@ public class TerrestresFragment extends Fragment implements View.OnClickListener
             e.printStackTrace();
         }
 
+    }
+
+    private void showAnimation(View view) {
+        ImageView imageView = (ImageView) view;
+        AnimationDrawable animationDrawable = (AnimationDrawable) imageView.getDrawable();
+        animationDrawable.stop();
+        animationDrawable.start();
+    }
+
+    private void showSnackBar(String string) {
+        CoordinatorLayout coordinatorLayout = getActivity().findViewById(R.id.coordInMainId);
+        Snackbar snackbar = Snackbar
+                .make(coordinatorLayout, string,
+                        Snackbar.LENGTH_SHORT);
+        snackbar.show();
     }
 }
