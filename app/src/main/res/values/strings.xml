@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Som Dos Veículos</string>
-    <string name="action_settings">Settings</string>
     <string name="desc_image_collapse">Som dos Veículos</string>
     <string name="action_about">Sobre</string>
     <string name="action_share">Compartilhar</string>
@@ -20,14 +19,12 @@
     <string name="trator">Trator</string>
     <string name="trem">Trem</string>
     <string name="design">Design from freepik.com</string>
-    <string name="text_share_link">Que legal e divertido o som dos veículos. Tem carro, avião, trem e muito mais. Vem se divertir também. Baixe o App em: link\n</string>
-    <string name="link_to_policy">https:/www.google.com</string>
+    <string name="text_share_link">Que legal e divertido o som dos veículos. Tem carro, avião, trem e muito mais. Vem se divertir também. Baixe o App em: https://play.google.com/store/apps/details?id=com.luizmagno.somdosveiculos\n</string>
+    <string name="link_to_policy">https://luizmgms.wixsite.com/home/som-dos-veiculos</string>
     <string name="avalie_app">Avaliar</string>
     <string name="created_at">Criado por Luiz Magno M. de Sousa.\nArt Design por freepik.com\nVersão 1.0.0</string>
-    <string name="link_to_avalie">https:/www.google.com</string>
+    <string name="link_to_avalie">https://play.google.com/store/apps/details?id=com.luizmagno.somdosveiculos</string>
     <string name="policy">Política de Privaciade</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab_text_1">Terrestres</string>
     <string name="tab_text_2">Aéreos</string>
     <string name="tab_text_3">Aquáticos</string>
