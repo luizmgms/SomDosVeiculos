@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadBanner() {
         mAdView = new AdView(this);
-        mAdView.setAdUnitId(Developer.ID_OF_ANUN);
+        mAdView.setAdUnitId(Developer.ID_OF_ANUN_TEST);
         adContainerView.removeAllViews();
         adContainerView.addView(mAdView);
 
