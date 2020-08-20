@@ -24,9 +24,10 @@
     <string name="avalie_app">Avaliar</string>
     <string name="created_at">Criado por Luiz Magno M. de Sousa.\nArt Design por freepik.com\nVersão 1.0.0</string>
     <string name="link_to_avalie">https://play.google.com/store/apps/details?id=com.luizmagno.somdosveiculos</string>
-    <string name="policy">Política de Privaciade</string>
+    <string name="policy">Política de Privacidade</string>
     <string name="tab_text_1">Terrestres</string>
     <string name="tab_text_2">Aéreos</string>
     <string name="tab_text_3">Aquáticos</string>
     <string name="navio">Navio</string>
+    <string name="id_of_app">ca-app-pub-9790401897088480~4401350299</string>
 </resources>
