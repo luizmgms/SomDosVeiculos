@@ -34,7 +34,6 @@ public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
         //return PlaceholderFragment.newInstance(position + 1);
         switch (position){
             case 0:
-
                 return new TerrestresFragment();
             case 1:
                 return new AereosFragment();

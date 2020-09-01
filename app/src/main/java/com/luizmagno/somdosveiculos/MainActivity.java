@@ -32,14 +32,28 @@ public class MainActivity extends AppCompatActivity {
 
     public static MediaPlayer mp;
     private FrameLayout adContainerView;
-    private AdView mAdView;
 
     @Override
     protected void onPause() {
         super.onPause();
-        mp.stop();
-        mp.release();
-        mp = null;
+        if(mp != null) {
+            mp.stop();
+            mp.release();
+            mp = null;
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //Inicializando Player
+        mp = new MediaPlayer();
+        mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.start();
+            }
+        });
     }
 
     @Override
@@ -65,12 +79,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         CollapsingToolbarLayout toolBarLayout = findViewById(R.id.toolbar_layout);
-        toolBarLayout.setExpandedTitleColor(
-            getResources().getColor(android.R.color.transparent, null));
+        toolBarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
         toolBarLayout.setCollapsedTitleTextColor(
-            getResources().getColor(android.R.color.white, null));
+            getResources().getColor(android.R.color.white));
 
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(
+            this, getSupportFragmentManager());
 
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
@@ -219,8 +233,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadBanner() {
-        mAdView = new AdView(this);
-        mAdView.setAdUnitId(Developer.ID_OF_ANUN_TEST);
+        AdView mAdView = new AdView(this);
+        mAdView.setAdUnitId(Developer.ID_OF_ANUN);
         adContainerView.removeAllViews();
         adContainerView.addView(mAdView);
 
