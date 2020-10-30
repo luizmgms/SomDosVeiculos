@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
@@ -13,11 +13,11 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/aviaoId"
+            android:id="@+id/aviaoJatoId"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:contentDescription="@string/aviao"
+            android:contentDescription="@string/aviao_jato"
             android:src="@drawable/anim_aviao"
             app:layout_constraintEnd_toStartOf="@+id/carroId"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
             android:contentDescription="@string/carro"
             android:src="@drawable/anim_carro"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/aviaoId"
+            app:layout_constraintStart_toEndOf="@+id/aviaoJatoId"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
@@ -43,7 +43,7 @@
             android:src="@drawable/anim_bici"
             app:layout_constraintEnd_toStartOf="@+id/caminhaoId"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/aviaoId" />
+            app:layout_constraintTop_toBottomOf="@+id/aviaoJatoId" />
 
         <ImageView
             android:id="@+id/caminhaoId"
@@ -167,15 +167,26 @@
             app:layout_constraintTop_toBottomOf="@id/policiaId" />
 
         <ImageView
-            android:id="@+id/tremId"
+            android:id="@+id/navioId"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/navio"
+            android:src="@drawable/anim_navio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subId"
+            app:layout_constraintEnd_toEndOf="@id/subId"/>
+
+        <ImageView
+            android:id="@+id/tremId"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:adjustViewBounds="true"
             android:contentDescription="@string/trem"
             android:src="@drawable/anim_trem"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tratorId"/>
+            app:layout_constraintTop_toBottomOf="@id/navioId"/>
 
         <ImageView
             android:layout_width="0dp"

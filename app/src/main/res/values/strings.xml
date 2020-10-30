@@ -3,7 +3,7 @@
     <string name="desc_image_collapse">Som dos Veículos</string>
     <string name="action_about">Sobre</string>
     <string name="action_share">Compartilhar</string>
-    <string name="aviao">Avião</string>
+    <string name="aviao_jato">Avião a Jato</string>
     <string name="carro">Carro</string>
     <string name="bicicleta">Bicicleta</string>
     <string name="caminhao">Caminhão</string>
@@ -25,9 +25,6 @@
     <string name="created_at">Criado por Luiz Magno M. de Sousa.\nArt Design por freepik.com\nVersão 1.0.0</string>
     <string name="link_to_avalie">https://play.google.com/store/apps/details?id=com.luizmagno.somdosveiculos</string>
     <string name="policy">Política de Privacidade</string>
-    <string name="tab_text_1">Terrestres</string>
-    <string name="tab_text_2">Aéreos</string>
-    <string name="tab_text_3">Aquáticos</string>
     <string name="navio">Navio</string>
-    <string name="id_of_app">ca-app-pub-9790401897088480~4401350299</string>
+    <string name="error">Ocorreu um Erro!</string>
 </resources>
