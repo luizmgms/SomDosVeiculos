@@ -27,4 +27,5 @@
     <string name="policy">Política de Privacidade</string>
     <string name="navio">Navio</string>
     <string name="error">Ocorreu um Erro!</string>
+    <string name="vehicle">Veículo</string>
 </resources>
